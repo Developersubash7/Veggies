@@ -15,7 +15,7 @@ function Myorders() {
   }, []);
 
   return (
-    <div className='mt-16 px-16'>
+    <div className='mt-16 px-5 md:px-16'>
       <div className='flex flex-col items-end w-max mb-8'>
         <p className='text-2xl font-medium uppercase'>My Orders</p>
         <div className='w-16 h-0.5 bg-primary rounded-full'></div>
@@ -34,11 +34,11 @@ function Myorders() {
               key={item.product._id || i} 
               className={`relative bg-white text-gray-500/70 ${order.items.length !== i + 1 ? "border-b" : ""} border-gray-300 flex flex-col md:flex-row md:items-center justify-between p-4 md:gap-16 w-full max-w-4xl`}
             >
-              <div className='flex items-center mb-4 md:mb-0'>
-                <div className='bg-primary/10 p-4 rounded-lg'>
+              <div className='flex flex-col md:flex-row items-start md:items-center mb-4 md:mb-0'>
+                <div className='bg-primary/10 p-0 md:p-4 rounded-lg'>
                   <img src={item.product.image[0]} alt={item.product.name} className='w-16 h-16' />
                 </div>
-                <div className='ml-4'>
+                <div className='ml-0 md:ml-4 text-xs'>
                   <h2 className='text-xl font-medium text-gray-800'>{item.product.name}</h2>
                   <p>Category: {item.product.category}</p>
                 </div>
