@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import { categories } from '../assets/assets';
 import { useAppContext } from '../context/AppContext'
-import { ProductCart } from '../component/Productcart';
+import { ProductCart } from '../component/ProductCart';
 
 
 function Productcategory() {
