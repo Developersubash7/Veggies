@@ -63,9 +63,9 @@ export const Navbar = () => {
 
             {/* Mobile Menu Icon SVG */}
 
-            <div className="flex items-center justify-center gap-6  sm:hidden "> 
-                <input onChange={(e) => setsearchQuery(e.target.value)} className="placeholder:text-sm py-0.5 pl-1.5  w-[60%] bg-transparent border border-gray-500  focus:outline-none focus:ring-0 rounded-2xl placeholder-gray-500" type="text" placeholder="Search..." />
-                <div onClick={() => navigate('/cart')} className="relative cursor-pointer">
+            <div className="flex items-center justify-center gap-4  sm:hidden "> 
+                <input onChange={(e) => setsearchQuery(e.target.value)} className="placeholder:text-sm py-1 pl-1.5  w-[60%] bg-transparent border border-gray-500  focus:outline-none focus:ring-0 rounded-2xl placeholder-gray-500" type="text" placeholder="Search..." />
+                <div onClick={() => navigate('/cart')} className="relative cursor-pointer flex items-center">
                     <img src={assets.cart_icon} alt="" className="w-6 opacity-80" />
                     <button className="absolute -top-2 -right-3 text-xs text-white bg-primary w-[18px] h-[18px] rounded-full">{getCartCount()}</button>
                 </div>

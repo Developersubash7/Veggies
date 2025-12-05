@@ -7,7 +7,7 @@ import { Newsletter } from '../component/Newsletter'
 
 function Home() {
   return (
-    <div className='mt-10 '>
+    <div className='mt-6'>
       <Mainbanner/>
       <Categories/>
       <Bestseller/>
