@@ -43,12 +43,11 @@ export const ProductCart = ({ product }) => {
           <p className="text-xs md:text-sm text-gray-500">4</p>
         </div>
 
-        <div className="mt-1 flex items-end justify-between gap-3">
+        <div className="mt-1 flex items-center justify-between gap-3">
           <p className="text-indigo-600 font-semibold md:text-xl text-sm">
             {currency}{product.offerPrice}
             <span className="text-gray-400 md:text-sm text-xs line-through ml-2">{currency}{product.price}</span>
           </p>
-
           <div onClick={(e) => { e.stopPropagation(); }} className="flex items-center">
             {!cartItems[product._id] ? (
               <button
@@ -61,7 +60,7 @@ export const ProductCart = ({ product }) => {
                 <span className="hidden xs:inline">Add</span>
               </button>
             ) : (
-              <div className="flex items-center justify-center gap-2 bg-indigo-50 rounded-md px-2 md:px-3 h-9">
+              <div className="flex items-center justify-center gap-1.5 md:gap-2 bg-indigo-50 rounded-md px-1 md:px-3 h-9">
                 <button onClick={() => removeFromCart(product._id)} className="px-2 md:px-3 text-base">-</button>
                 <span className="w-6 text-center text-sm">{cartItems[product._id]}</span>
                 <button onClick={() => addToCart(product._id)} className="px-2 md:px-3 text-base">+</button>
