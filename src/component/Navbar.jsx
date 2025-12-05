@@ -9,9 +9,6 @@ export const Navbar = () => {
     const logout = async () => {
         setUser(null);
         navigate('/')
-
-
-        
     }
     useEffect(() => {
         if (searchQuery.length > 0) {
@@ -19,19 +16,19 @@ export const Navbar = () => {
         }
     }, [searchQuery])
     return (
-        <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white relative transition-all">
+        <nav className="flex items-center justify-between px-2 md:px-12 lg:px-22 xl:px-32 py-4 border-b border-gray-300 bg-white relative transition-all w-full">
 
-             <NavLink to='/' onClick={() => setOpen(false)} className={'text-4xl font-medium inline-block border-b-3 border-green-500 w-23'}>
+             <NavLink to='/' onClick={() => setOpen(false)} className={' text-2xl md:text-4xl font-medium inline-block  w-1/4'}>
                 Freshio
+                <div className="w-20 h-1 bg-green-500 "></div>
             </NavLink> 
-            {/* <img src={logo} alt="Logo" className="w-35 h-15" /> */}
             {/* Desktop Menu */}
-            <div className="hidden sm:flex items-center gap-8">
+            <div className="hidden sm:flex items-center justify-end gap-5 xl:gap-8 w-3/4">
                 <NavLink to='/'>Home</NavLink>
                 <NavLink to='/products'>All Product</NavLink>
                 <NavLink to='/my-orders'>My orders</NavLink>
 
-                <div className="hidden lg:flex items-center text-sm gap-2 border border-gray-300 px-3 rounded-full">
+                <div className="hidden md:flex items-center text-sm gap-2 border border-gray-300 px-3 rounded-full">
                     <input onChange={(e) => setsearchQuery(e.target.value)} className="py-1.5 w-full bg-transparent outline-none placeholder-gray-500" type="text" placeholder="Search products" />
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10.836 10.615 15 14.695" stroke="#7A7B7D" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
@@ -66,7 +63,8 @@ export const Navbar = () => {
 
             {/* Mobile Menu Icon SVG */}
 
-            <div className="flex items-center gap-6 sm:hidden"> 
+            <div className="flex items-center justify-center gap-6  sm:hidden "> 
+                <input onChange={(e) => setsearchQuery(e.target.value)} className="placeholder:text-sm py-0.5 pl-1.5  w-[60%] bg-transparent border focus:border-primary rounded-2xl placeholder-gray-500" type="text" placeholder="Search..." />
                 <div onClick={() => navigate('/cart')} className="relative cursor-pointer">
                     <img src={assets.cart_icon} alt="" className="w-6 opacity-80" />
                     <button className="absolute -top-2 -right-3 text-xs text-white bg-primary w-[18px] h-[18px] rounded-full">{getCartCount()}</button>
