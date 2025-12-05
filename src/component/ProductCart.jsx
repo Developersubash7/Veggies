@@ -60,7 +60,7 @@ export const ProductCart = ({ product }) => {
                 <span className="hidden xs:inline">Add</span>
               </button>
             ) : (
-              <div className="flex items-center justify-center gap-1.5 md:gap-2 bg-indigo-50 rounded-md px-1 md:px-3 h-9">
+              <div className="flex items-center justify-center gap-0 sm:gap-1 md:gap-2 bg-indigo-50 rounded-md  md:px-3 h-9">
                 <button onClick={() => removeFromCart(product._id)} className="px-2 md:px-3 text-base">-</button>
                 <span className="w-6 text-center text-sm">{cartItems[product._id]}</span>
                 <button onClick={() => addToCart(product._id)} className="px-2 md:px-3 text-base">+</button>
